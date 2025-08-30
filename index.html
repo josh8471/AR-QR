@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AR Image Example</title>
+    <title>Markerless AR Image</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-image src="linda.jpg" width="4" height="4" position="0 1 0"></a-image>
-      </a-marker>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;">
+      
+      <!-- Place the image in front of the user -->
+      <a-image src="myimage.png" width="2" height="2" position="0 1.5 -3"></a-image>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
