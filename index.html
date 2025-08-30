@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Markerless AR Image</title>
+    <title>Direct AR Image</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <!-- Enable WebXR AR mode -->
+    <!-- A-Frame Scene with WebXR enabled -->
     <a-scene
-      vr-mode-ui="enabled: false"
       embedded
+      vr-mode-ui="enabled: false"
       renderer="logarithmicDepthBuffer: true;"
-      xrweb="optionalFeatures: hit-test;">
+      webxr="optionalFeatures: hit-test, dom-overlay;"
+      device-orientation-permission-ui="enabled: true">
       
       <!-- Camera -->
       <a-entity camera></a-entity>
 
-      <!-- The image to appear in front of the user -->
+      <!-- Your image always visible in front of user -->
       <a-image 
         src="linda.jpg" 
         width="2" 
         height="2" 
-        position="0 1.5 -3">
+        position="0 1.5 -3" 
+        look-at="[camera]">
       </a-image>
     </a-scene>
   </body>
