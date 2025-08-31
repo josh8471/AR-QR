@@ -3,26 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>AR Menu Example</title>
+    <!-- A-Frame + AR.js -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        
-        <!-- 6 menu images in 2 rows -->
-        <a-image src="img.png" width="1" height="1" position="-2 1 0"></a-image>
-        <a-image src="img2.png" width="1" height="1" position="0 1 0"></a-image>
-        <a-image src="img3.png" width="1" height="1" position="2 1 0"></a-image>
+      <!-- Use marker (you can replace 'hiro' with your custom marker if needed) -->
+      <a-marker preset="Scan here for 3D Menu">
+
+        <!-- 6 menu images arranged in 2 rows, 3 per row -->
+        <a-image src="img.png"  width="1" height="1" position="-2  1 0"></a-image>
+        <a-image src="img2.png" width="1" height="1" position=" 0  1 0"></a-image>
+        <a-image src="img3.png" width="1" height="1" position=" 2  1 0"></a-image>
 
         <a-image src="img4.png" width="1" height="1" position="-2 -1 0"></a-image>
-        <a-image src="img5.png" width="1" height="1" position="0 -1 0"></a-image>
-        <a-image src="img6.png" width="1" height="1" position="2 -1 0"></a-image>
+        <a-image src="img5.png" width="1" height="1" position=" 0 -1 0"></a-image>
+        <a-image src="img6.png" width="1" height="1" position=" 2 -1 0"></a-image>
 
       </a-marker>
 
+      <!-- Camera -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
